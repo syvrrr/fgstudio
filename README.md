@@ -87,5 +87,5 @@ The website includes a variety of projects, each with its own unique features:
 
 
 ## Getting Started
-To get started with the project, clone the repository and open the `index.html` file in your browser. Ensure you have an internet connection to load external libraries.
+> To get started with the project, clone the repository and open the `index.html` file in your browser.
 ---
