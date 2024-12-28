@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Minesweeper - syvr</title>
+</head>
+
+<body>
+    <div class="bg-animation" id="bgAnimation"></div>
+
+    <div class="game-container">
+        <div class="controls">
+            <div class="info-display">
+                Mines: <span id="mine-count">10</span>
+            </div>
+
+            <button class="new-game-btn" onclick="initGame()">New Game</button>
+            <div class="info-display">
+                Time: <span id="timer">0</span>
+            </div>
+        </div>
+
+        <div class="grid" id="grid"></div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

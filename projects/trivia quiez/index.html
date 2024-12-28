@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Trivia Quiez - syvr</title>
+</head>
+
+<body>
+    <div class="background">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+    </div>
+
+    <div class="quiz-container">
+        <h1>Trivia Quiez</h1>
+        <div id="question-container" class="hidden">
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
+
+            <p id="question-text"></p>
+            <div id="answer-buttons"></div>
+        </div>
+
+        <div class="controls">
+            <button id="start-btn" class="btn start-btn">Start Quiz</button>
+            <button id="next-btn" class="btn next-btn hidden">Next</button>
+        </div>
+
+        <div id="score-container" class="hidden">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>

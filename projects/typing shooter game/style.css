@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #1a1a2e, #16213e);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: white;
+}
+
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 15s infinite linear;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) scale(0); opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+    
+    100% {
+        transform: translateY(-100px) scale(1); opacity: 0;
+    }
+}
+
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.enemy {
+    position: absolute;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: rgba(255, 71, 87, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 15px rgba(255, 71, 87, 0.5);
+    font-size: 18px;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.enemy.targeted {
+    background: rgba(255, 196, 0, 0.8);
+    box-shadow: 0 0 20px rgba(255, 196, 0, 0.6);
+    transform: scale(1.1);
+}
+
+#status-bar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 30px;
+    border-radius: 20px;
+    display: flex;
+    gap: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+#score, #level {
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 0 10px;
+}
+
+#score {
+    color: #4ecca3;
+    text-shadow-color: rgba(78, 204, 163, 0.5);
+}
+
+#level {
+    color: #ff9f43;
+    text-shadow-color: rgba(255, 159, 67, 0.5);
+}
+
+#game-over {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+#typing-input {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 25px;
+    width: 400px;
+    font-size: 20px;
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+#typing-input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+#restart-btn {
+    padding: 15px 30px;
+    font-size: 20px;
+    background: rgba(78, 204, 163, 0.3);
+    border: 1px solid rgba(78, 204, 163, 0.5);
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(5px);
+}
+
+#restart-btn:hover {
+    transform: scale(1.05);
+    background: rgba(78, 204, 163, 0.5);
+}
+
+.laser {
+    position: absolute;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #4ecca3, #4ecca3);
+    transform-origin: left center;
+    animation: laser 0.3s linear;
+    box-shadow: 0 0 10px #4ecca3;
+}
+
+@keyframes laser {
+    from {
+        transform: scaleX(0);
+    }
+    
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes scorePopup {
+    0% {
+        transform: scale(1);
+    }
+    
+    50% {
+        transform: scale(1.2);
+    }
+    
+    100% {
+        transform: scale(1);
+    }
+}
+
+.score-animation {
+    animation: scorePopup 0.3s ease;
+}

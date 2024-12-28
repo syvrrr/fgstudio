@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Space Shooter - syvr</title>
+</head>
+
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        
+        <div id="ui-layer">
+            <div id="start-screen" class="screen">
+                <h1>Space Shooter Extravaganza</h1>
+                <div class="controls-info">
+                    <p>Mouse: Move cursor to aim, click to shoot</p>
+                    <p>Keyboard: Arrow keys to shoot in directions</p>
+                    <p>Spacebar: Shoot towards cursor</p>
+                </div>
+
+                <button id="start-button">Start Mission</button>
+            </div>
+            
+            <div id="game-over-screen" class="screen">
+                <h2>Mission Failed</h2>
+                <p>Your Score: <span id="final-score"></span></p>
+                
+                <button id="restart-button">Retry Mission</button>
+            </div>
+
+            <div id="hud">
+                <div id="score">Score: <span id="score-value">0</span></div>
+                <div id="lives">Lives: <span id="lives-value">3</span></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

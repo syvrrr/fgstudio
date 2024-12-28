@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.game-container {
+    width: 360px;
+    height: 640px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+canvas {
+    background: linear-gradient(180deg, #1e293b, #0f172a);
+}
+
+h1 {
+    font-size: 3rem;
+    color: #38bdf8;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 10px rgba(56, 189, 248, 0.3);
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #ef4444;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 10px rgba(239, 68, 68, 0.3);
+}
+
+.menu-screen, .game-over-screen {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(15, 23, 42, 0.95);
+    color: #e2e8f0;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+}
+
+.score, .high-score {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #94a3b8;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: white;
+    background: #0ea5e9;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.2s;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+                0 1px 3px rgba(0, 0, 0, 0.1),
+                0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background: #0284c7;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2),
+                0 2px 4px rgba(0, 0, 0, 0.1),
+                0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-pause {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    color: #e2e8f0;
+    background: rgba(148, 163, 184, 0.1);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+    backdrop-filter: blur(4px);
+}
+
+.btn-pause:hover {
+    background: rgba(148, 163, 184, 0.2);
+    transform: scale(1.05);
+}
+
+.score-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: #38bdf8;
+    text-shadow: 0 2px 10px rgba(56, 189, 248, 0.3);
+}
+
+.hidden {
+    display: none;
+}

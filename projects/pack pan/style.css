@@ -1,0 +1,107 @@
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a2e;
+    color: #ffffff;
+}
+
+.game-container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #16db93;
+    text-shadow: 2px 2px #0d0d0d;
+}
+
+.score-board {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2em;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(20, 20px);
+    grid-template-rows: repeat(20, 20px);
+    gap: 1px;
+    border: 2px solid #16db93;
+    background-color: #0d0d0d;
+    box-shadow: 0 0 10px #16db93;
+}
+
+.cell {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: #1a1a2e;
+}
+
+.wall {
+    background-color: #0d0d0d;
+}
+
+.food {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    transform: translate(-50%, -50%);
+    background-color: #f0f3bd;
+    border-radius: 50%;
+}
+
+.player, .ghost {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+}
+
+.player {
+    z-index: 10;
+    background-color: #16db93;
+    border-radius: 50%;
+}
+
+.ghost {
+    z-index: 5;
+    border-radius: 50% 50% 0 0;
+}
+
+.player-cell {
+    box-shadow: inset 0 0 10px 3px rgba(22, 219, 147, 0.7);
+}
+
+.ghost-cell {
+    box-shadow: inset 0 0 10px 3px rgba(255, 105, 180, 0.7);
+}
+
+#start-button, #restart-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #ffffff;
+    background-color: #16db93;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#start-button:hover, #restart-button:hover {
+    background-color: #13c27f;
+}
+
+#restart-button {
+    display: none;
+}

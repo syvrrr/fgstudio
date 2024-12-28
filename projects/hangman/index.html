@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hangman - syvr</title>
+</head>
+
+<body>
+    <div class="background">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <div class="container">
+        <h1>Hangman</h1>
+
+        <div class="game-area">
+            <div id="word" class="word glassmorphism"></div>
+            <div id="hint" class="hint glassmorphism"></div>
+            <div id="hangman" class="hangman glassmorphism"></div>
+            <div id="message" class="message glassmorphism"></div>
+            <div id="keyboard" class="keyboard glassmorphism"></div>
+        </div>
+
+        <button id="newGameBtn" class="glassmorphism">New Game</button>
+    </div>
+
+    <canvas id="confetti"></canvas>
+    
+    <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pixel Art- syvr</title>
+</head>
+
+<body>
+    <div class="container fade-in">
+        <h1>Pixel Art</h1>
+
+        <canvas id="pixelCanvas" width="320" height="320">
+        </canvas>
+
+        <div class="controls">
+            <div class="color-picker">
+                <div class="color-option active tooltip" style="background-color: #000000;" data-color="#000000">
+                    <span class="tooltiptext">Black</span>
+                </div>
+
+                <div class="color-option tooltip" style="background-color: #FFFFFF;" data-color="#FFFFFF">
+                    <span class="tooltiptext">White</span>
+                </div>
+
+                <div class="color-option tooltip" style="background-color: #FF0000;" data-color="#FF0000">
+                    <span class="tooltiptext">Red</span>
+                </div>
+
+                <div class="color-option tooltip" style="background-color: #00FF00;" data-color="#00FF00">
+                    <span class="tooltiptext">Green</span>
+                </div>
+
+                <div class="color-option tooltip" style="background-color: #0000FF;" data-color="#0000FF">
+                    <span class="tooltiptext">Blue</span>
+                </div>
+
+                <div class="color-option tooltip" style="background-color: #FFFF00;" data-color="#FFFF00">
+                    <span class="tooltiptext">Yellow</span>
+                </div>
+
+                <input type="color" id="customColorPicker" class="tooltip">
+                <span class="tooltiptext">Custom Color</span>
+            </div>
+
+            <input type="range" id="pixelSize" min="5" max="40" value="20">
+            
+            <button id="clearBtn" class="tooltip">Clear Canvas
+                <span class="tooltiptext">Reset the canvas</span>
+            </button>
+
+            <button id="downloadBtn" class="tooltip">Download
+                <span class="tooltiptext">Save your artwork</span>
+            </button>
+            
+            <button id="toggleModeBtn" class="tooltip">Toggle Light/Dark Mode
+                <span class="tooltiptext">Switch between light and dark mode</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

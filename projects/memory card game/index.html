@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Memory Card Game - syvr</title>
+</head>
+
+<body>
+    <div class="game-container">
+        <h1>Memory Card Game</h1>
+
+        <div class="game-board"></div>
+
+        <div class="game-info">
+            <p>Moves: <span id="moves">0</span></p>
+            <p>Time: <span id="timer">00:00</span></p>
+            
+            <button id="reset-button">Reset Game</button>
+        </div>
+    </div>
+    <div id="confetti"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

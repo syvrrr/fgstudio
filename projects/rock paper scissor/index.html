@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissors - syvr</title>
+</head>
+
+<body class="flex items-center justify-center min-h-screen text-white">
+    <div class="background-container" id="background"></div>
+    
+    <main class="container mx-auto text-center game-container">
+        <h1 class="text-5xl font-bold mb-10 tracking-wider">
+            Rock Paper Scissors
+        </h1>
+        
+        <section id="choices" class="flex justify-center gap-8 mb-12">
+            <button onclick="playGame('rock')" class="game-btn emoji-btn">✊</button>
+            <button onclick="playGame('paper')" class="game-btn emoji-btn">✋</button>
+            <button onclick="playGame('scissors')" class="game-btn emoji-btn">✌️</button>
+        </section>
+        
+        <section id="result-container" class="text-3xl font-bold mb-8 min-h-[5rem]">
+            Pick your move!
+        </section>
+        
+        <section class="flex justify-center gap-12">
+            <div class="text-2xl">
+                You: <span id="player-score" class="text-green-400">0</span>
+            </div>
+            
+            <div class="text-2xl">
+                Computer: <span id="computer-score" class="text-red-400">0</span>
+            </div>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

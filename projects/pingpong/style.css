@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #0a192f, #20232a);
+    overflow: hidden;
+}
+
+#gameContainer {
+    position: relative;
+    width: 900px;
+    height: 500px;
+    border: 4px solid #00ffff;
+    border-radius: 20px;
+    background: linear-gradient(to bottom right, #1a2980, #26d0ce);
+    box-shadow: 
+        0 0 50px rgba(38, 208, 206, 0.4),
+        0 0 100px rgba(26, 41, 128, 0.3);
+    overflow: hidden;
+    outline: none;
+}
+
+#centerLine {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-50%);
+}
+
+#scoreBoard {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    color: white;
+    font-size: 28px;
+    display: flex;
+    justify-content: space-around;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+.paddle {
+    position: absolute;
+    width: 20px;
+    height: 120px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #00ffff, #1a2980);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    cursor: move;
+}
+
+.ball {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #00ffff, #1a2980);
+    box-shadow: 
+        0 0 20px rgba(0, 255, 255, 0.7),
+        0 0 40px rgba(26, 41, 128, 0.5);
+}
+
+.powerup {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.powerup-multiple-balls {
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+}
+
+.powerup-extra-paddle {
+    background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+}
+
+#starField {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.7;
+}
+
+#instructionsOverlay {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    opacity: 0.7;
+}

@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #0f172a;
+    padding: 2rem;
+    color: #e2e8f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.bg-gradient {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    filter: blur(100px);
+    animation: move 15s infinite alternate;
+    opacity: 0.5;
+}
+
+.gradient-1 {
+    background: #3b82f6;
+    top: -200px;
+    left: -200px;
+    animation-delay: -2s;
+}
+
+.gradient-2 {
+    background: #6366f1;
+    bottom: -200px;
+    right: -200px;
+    animation-delay: -4s;
+}
+
+.gradient-3 {
+    background: #8b5cf6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: -6s;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(100px, 50px) scale(1.2);
+    }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1; transform: translateY(0);
+    }
+}
+
+.header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h1 {
+    color: #f8fafc;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.difficulty {
+    margin-bottom: 1rem;
+}
+
+.difficulty button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    cursor: pointer;
+    transition: all 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+.difficulty button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.difficulty button.active {
+    background: rgba(59, 130, 246, 0.3);
+    border: 1px solid rgba(59, 130, 246, 0.5);
+}
+
+.controls button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgba(59, 130, 246, 0.3);
+    color: #f8fafc;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 1px solid rgba(59, 130, 246, 0.5);
+}
+
+.controls button:hover {
+    background: rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 1px;
+    background: rgba(203, 213, 225, 0.1);
+    padding: 1px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #e2e8f0;
+}
+
+.cell:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.cell.prefilled {
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+.cell.selected {
+    background: rgba(59, 130, 246, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.5);
+}
+
+.cell.error {
+    color: #ef4444;
+}
+
+.cell:nth-child(9n+1), .cell:nth-child(9n+2), .cell:nth-child(9n+3) {
+    border-right: 2px solid rgba(203, 213, 225, 0.2);
+}
+
+.cell:nth-child(n+19):nth-child(-n+27), .cell:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 2px solid rgba(203, 213, 225, 0.2);
+}
+
+.status {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    color: #94a3b8;
+    text-align: center;
+}
+
+.numpad {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+}
+
+.numpad button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+.numpad button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .cell {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}

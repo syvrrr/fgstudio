@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="style.css" />
+  <title>Word Scramble Challenge</title>
+</head>
+
+<body>
+  <main class="container">
+    <div class="game-area">
+      <div class="game-header">
+        <div class="stats-container">
+
+          <div class="stat-box score-box">
+            <div class="stat-label">Score</div>
+            <div class="stat-value" id="score">0</div>
+          </div>
+          
+          <div class="stat-box timer-box">
+            <div class="stat-label">Time</div>
+            <div class="stat-value"><span id="time">60</span>s</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="word-section">
+        <div class="scrambled-word" id="scrambled-word">READY?</div>
+        
+        <div class="word-input">
+          <input type="text" id="user-input" placeholder="Type your answer..." autocomplete="off" spellcheck="false"/>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="start-btn" class="btn btn-primary">Start Game</button>
+        <button id="next-btn" class="btn btn-secondary" disabled>Next Word</button>
+      </div>
+
+      <div class="hint-container">
+        <span id="hint-text"></span>
+      </div>
+
+      <div id="message" class="message"></div>
+    </div>
+  </main>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

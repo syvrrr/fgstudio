@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Dino Game - syvr</title>
+</head>
+
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="900" height="400"></canvas>
+
+        <div class="ui">
+            <div id="score">Score: 0</div>
+            <div id="highScore">High Score: 0</div>
+        </div>
+
+        <div id="gameOver">
+            Game Over!<br>
+            <span style="font-size: 24px">Press Space to Restart</span>
+        </div>
+        
+        <div id="startScreen">
+            Press Space to Start<br>
+            <span style="font-size: 18px">Jump with Space</span>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>

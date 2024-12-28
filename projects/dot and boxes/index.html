@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dots and Boxes - syvr</title>
+</head>
+
+<body>
+    <div class="background-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <h1>Dots and Boxes</h1>
+    <div id="controls">
+        <select id="grid-size" onchange="changeGridSize()">
+            <option value="3">3x3 Grid</option>
+            <option value="4" selected>4x4 Grid</option>
+            <option value="5">5x5 Grid</option>
+            <option value="6">6x6 Grid</option>
+        </select>
+
+        <select id="game-mode" onchange="changeGameMode()">
+            <option value="pvp">Player vs Player</option>
+            <option value="pvc">Player vs Computer</option>
+        </select>
+        
+        <button onclick="resetGame()">Reset Game</button>
+    </div>
+   
+    <div id="game-container">
+        <div class="player-info">
+            <div class="player-card" id="player1-card">
+                Player 1: <span class="player1-score">0</span>
+            </div>
+    
+            <div class="player-card" id="player2-card">
+                Player 2: <span class="player2-score">0</span>
+            </div>
+        </div>
+    
+        <div id="game-board"></div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

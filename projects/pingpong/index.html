@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Ping the Pong - syvr</title>
+</head>
+
+<body>
+    <div id="gameContainer" tabindex="0">
+        <div id="starField"></div>
+        <div id="centerLine"></div>
+        
+        <div id="scoreBoard">
+            <span>Player: <span id="playerScore">0</span></span>
+            <span>Computer: <span id="computerScore">0</span></span>
+        </div>
+
+        <div id="playerPaddle" class="paddle"></div>
+        <div id="computerPaddle" class="paddle"></div>
+        
+        <div id="instructionsOverlay">
+            Use ↑ and ↓ Arrow Keys to Move | Mouse Click to Interact with Power-Ups
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>

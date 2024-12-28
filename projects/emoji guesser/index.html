@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Guess the Emoji - syvr</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Guess the Emoji</h1>
+
+        <div class="difficulty-selector">
+            <button class="difficulty-btn active" data-difficulty="easy">Easy</button>
+            <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+            <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+        </div>
+
+        <div class="stats">
+            <div class="timer">Time: <span id="time">60</span>s</div>
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="high-score">Best: <span id="highScore">0</span></div>
+        </div>
+
+        <div class="emoji-display" id="emoji"></div>
+        <div class="options" id="options"></div>
+        <div class="feedback" id="feedback"></div>
+        <div class="streak-bonus" id="streak"></div>
+
+        <div class="high-scores-container" id="highScoresContainer">
+            <h2>High Scores</h2>
+            <ul class="high-scores-list" id="highScoresList"></ul>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>

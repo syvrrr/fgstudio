@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Ball Sorting - syvr</title>
+</head>
+
+<body>
+    <div id="game-container">
+        <div id="game-header">
+            <h1>Ball Sorting Game</h1>
+            <div id="timer" class="stat-box">Time: 30s</div>
+        </div>
+
+        <div class="game-stats">
+            <div id="score" class="stat-box">Score: 0</div>
+            <div id="level" class="stat-box">Level: 1</div>
+        </div>
+
+        <div id="difficulty-selector">
+            <button class="difficulty-btn active" data-difficulty="easy">Easy</button>
+            <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+            <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+        </div>
+
+        <div id="game-controls">
+            <button id="start-btn" class="game-button">Start Game</button>
+            <button id="reset-btn" class="game-button" style="display:none;">Reset Game</button>
+        </div>
+
+        <div id="game-over">Game Over!</div>
+
+        <div id="ball-source"></div>
+
+        <div id="sorting-area">
+            <div class="bucket red-bucket" data-color="red"></div>
+            <div class="bucket blue-bucket" data-color="blue"></div>
+            <div class="bucket green-bucket" data-color="green"></div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

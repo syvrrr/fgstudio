@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Color Palette Gen - syvr</title>
+</head>
+
+<body>
+    <div class="background-animation">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>
+
+    <main class="container">
+        <header class="header">
+            <h1>Color Palette Generator</h1>
+            <p>Create stunning color combinations instantly for your nextporject!</p>
+        </header>
+        
+        <nav class="controls">
+            <button onclick="generatePalette()">Random Palette</button>
+            <button onclick="generateMonochromatic()">Monochromatic</button>
+            <button onclick="generateAnalogous()">Analogous</button>
+            <button onclick="generateComplementary()">Complementary</button>
+        </nav>
+
+        <section class="palette" id="palette"></section>
+    </main>
+
+    <div class="toast" id="toast">Copied!</div>
+    <div class="spacebar-hint">Press spacebar for new palette</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
