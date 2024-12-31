@@ -7,7 +7,7 @@
 - to generate `words` content (#word scramble)
 - to generate `this.words` content (#typing shooter game)
 
-### Tutorials and references followed throughout the project.
+### Tutorials, Courses and references followed throughout the project.
 - [Basic Idea of the whole home page](https://youtu.be/6VbETTS67rM?si=yMziA1_fvfxIhUti)
 - [HTML & CSS](https://html.com/)
 - [MDN Docs: HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) 
@@ -16,6 +16,11 @@
 - [W3 Schools: CSS Introduction](https://www.w3schools.com/css/)
 - [MDN Docs: JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [W3 Schools: JavaScript](https://www.w3schools.com/js/)
+- [HTML for beginners: Apna College](https://youtu.be/HcOc7P5BMi4?si=eOjq8TWmf8mFsNJp)
+- [CSS for beginners: Apna College](https://youtu.be/ESnrn1kAD4E?si=k-Umndw6ySNqNWPF)
+- [JavaScript: Shradha Khapra](https://www.youtube.com/@shradhaKD/videos)
+- [HTML & CSS full course: Bro Code](https://youtu.be/HGTJBPNC-Gw?si=gmfclV3aXMktEXmN)
+
 #### *some lines of code might be copy pasted or used in the same way as mentioned/written in the following [documentations](#tutorials-and-references-followed-throughout-the-project)*
 
 <br>
@@ -77,6 +82,7 @@ The website includes a variety of projects, each with its own unique features:
 - **Typing Shooter**: A type to shoot game.
 - **Sudoku**: Classic Sudoku Game.
 - **Dots and Boxes**: Paper game but digital.
+
 
 ## Technologies Used
 - **HTML/CSS**: For structuring and styling the website.
